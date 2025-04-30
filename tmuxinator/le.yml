@@ -1,0 +1,23 @@
+name: le
+root: ~/Work
+
+windows:
+  - vim:
+      - cd dispute-invoice/
+      - nvm use 14
+      - sleep 1
+      - nvim .
+  - mocks:
+      - cd mocks
+      - nvm use
+      - sleep 1
+      - clear
+      - npm run dev
+  - portal:
+      - cd portal-mcr-public
+      - nvm use
+      - sleep 1
+      - clear
+      - npm run serve -- --port 8080
+  - term:
+      - clear

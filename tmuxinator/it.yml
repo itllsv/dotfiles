@@ -1,0 +1,16 @@
+name: it
+root: ~/Code
+
+windows:
+  - editor:
+      - nvm use 23
+      - sleep 1
+      - clear
+  - term:
+      - nvm use 23
+      - sleep 1
+      - clear
+  - dev:
+      - nvm use 23
+      - sleep 1
+      - clear
