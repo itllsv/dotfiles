@@ -1,0 +1,24 @@
+name: mfe
+root: ~/Work
+
+windows:
+  - vim:
+      - cd mfe-payment-methods/
+      - nvm use 16
+      - sleep 1
+      - nvim .
+  - term:
+      - cd mfe-payment-methods/
+      - nvm use 16
+      - clear
+  - mocks:
+      - cd mocks
+      - nvm use
+      - sleep 1
+      - clear
+      - pn run dev
+  - dev:
+      - cd mfe-payment-methods/
+      - nvm use 16
+      - sleep 1
+      - pn run dev

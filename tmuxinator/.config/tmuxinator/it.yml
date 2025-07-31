@@ -1,5 +1,5 @@
 name: it
-root: ~/Code
+root: ~/Projects
 
 windows:
   - editor:

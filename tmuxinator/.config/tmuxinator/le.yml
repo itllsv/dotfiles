@@ -1,5 +1,4 @@
-name: le
-root: ~/Work
+name: le root: ~/Work
 
 windows:
   - vim:

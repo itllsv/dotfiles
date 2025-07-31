@@ -1,10 +1,12 @@
-name: mc
+
+name: ff
 root: ~/Work/portal-minha-claro/
 
 windows:
   - nvim:
       - nvm use 20.16
       - sleep 1
+      - cd apps/portal-public
       - clear
       - nvim .
   - term:
@@ -15,4 +17,4 @@ windows:
       - nvm use 20.16
       - sleep 1
       - clear
-      - pn dev:portal-logged
+      - pn dev:portal-public

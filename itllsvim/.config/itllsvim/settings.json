@@ -1,0 +1,102 @@
+{
+  // Editor settings
+  "editor.lineNumbers": "relative",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSurroundingLines": 15,
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "editor.mouseWheelZoom": true,
+  "editor.formatOnSave": true,
+  "editor.suggestSelection": "first",
+  "editor.minimap.enabled": false,
+  "editor.scrollBeyondLastLine": false,
+  "editor.guides.indentation": true,
+  "editor.cursorStyle": "line",
+  "editor.wordWrap": "off",
+  "editor.rulers": [80, 120],
+  "editor.fontFamily": "monospace",
+  "editor.fontLigatures": true,
+  
+  // Terminal settings
+  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.cursorBlinking": true,
+  
+  // Workbench settings
+  "workbench.colorTheme": "Kanagawa",
+  "workbench.editor.showTabs": true,
+  "workbench.startupEditor": "none",
+  "workbench.list.smoothScrolling": true,
+  "workbench.tree.indent": 15,
+  "workbench.colorCustomizations": {
+    "editor.background": "#00000000",
+    "sideBar.background": "#00000000",
+    "activityBar.background": "#00000000",
+    "panel.background": "#00000000",
+    "terminal.background": "#00000000"
+  },
+  
+  // Window settings
+  "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "custom",
+  
+  // Files settings
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  },
+  
+  // Explorer settings
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": false,
+  
+  // Zen Mode settings
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideTabs": false,
+  "zenMode.fullScreen": true,
+  "zenMode.centerLayout": true,
+  "zenMode.hideStatusBar": true,
+  
+  // Telemetry settings
+  "telemetry.telemetryLevel": "off",
+  
+  // Language specific settings
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  },
+  
+  // LSP settings
+  "editor.semanticHighlighting.enabled": true,
+  "editor.inlayHints.enabled": "on",
+  
+  // Keybindings
+  "keyboard.dispatch": "keyCode",
+  
+  // Extensions
+  "extensions.ignoreRecommendations": true,
+  
+  // Git settings
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  
+  // Breadcrumbs
+  "breadcrumbs.enabled": true,
+  
+  // Clipboard
+  "editor.clipboard.copyWithSyntaxHighlighting": false
+}

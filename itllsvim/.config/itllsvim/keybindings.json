@@ -1,0 +1,119 @@
+[
+  // Window navigation (similar to your C-h, C-j, C-k, C-l)
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  
+  // Buffer navigation (similar to your H and L)
+  {
+    "key": "shift+h",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "shift+l",
+    "command": "workbench.action.nextEditor"
+  },
+  
+  // Move lines (similar to your Alt+j and Alt+k)
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  
+  // LSP actions
+  {
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "g n",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "g a",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "g r",
+    "command": "editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus"
+  },
+  {
+    "key": "g i",
+    "command": "editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus"
+  },
+  {
+    "key": "g d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "g t",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "editorHasTypeDefinitionProvider && editorTextFocus"
+  },
+  
+  // Zen mode
+  {
+    "key": "ctrl+space z",
+    "command": "workbench.action.toggleZenMode"
+  },
+  
+  // Escape to clear search
+  {
+    "key": "escape",
+    "command": "workbench.action.clearEditorNotification",
+    "when": "editorFocus"
+  },
+  
+  // Disable arrow keys (similar to your Neovim setup)
+  {
+    "key": "left",
+    "command": "",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "right",
+    "command": "",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "up",
+    "command": "",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "down",
+    "command": "",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // Close all editors except current
+  {
+    "key": "b o",
+    "command": "workbench.action.closeOtherEditors"
+  }
+]
