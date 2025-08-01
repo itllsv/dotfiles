@@ -2,13 +2,12 @@ export ZSH="$HOME/.oh-my-zsh"
 export TERM='xterm-256color'
 export EDITOR='nvim'
 export VISUAL='nvim'
-export NVIM_APPNAME='lazyvim'
+export NVIM_APPNAME='nvim'
 
 plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
-  zsh-bat
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -19,27 +18,28 @@ alias vim="nvim"
 alias n="nvim"
 alias v="nvim"
 
-alias gc="git commit -m"
-alias ga="git add"
-
 alias work="cd ~/Work && clear"
-alias mc="cd ~/Work/portal-minha-claro/"
-alias it="cd ~/Projects/"
-alias dots="cd ~/.dotfiles"
-alias conf="cd ~/.config"
+alias code="cd ~/Code && clear"
+alias dots="cd ~/.dots && clear"
+alias conf="cd ~/.config && clear"
 
-alias nc="cd ~/.config/lazyvim/ && nvim init.lua"
+alias nc="cd ~/.config/nvim/ && nvim init.lua"
 alias zc="cd ~ && nvim ~/.zshrc"
 alias zs="source ~/.zshrc && clear"
 alias ttc="cd ~/.config/tmuxinator/ && nvim ."
-alias wc="cd ~/.config/wezterm/ && nvim wezterm.lua"
+alias ac="cd ~/.config/alacritty/ && nvim alacritty.toml"
 alias tc="nvim ~/.tmux.conf"
+alias hc="nvim ~/.config/hypr/hyprland.conf"
 
 alias tk="tmux kill-server"
 alias tts="tmuxinator start"
 
 alias cat="bat"
 alias pn="pnpm"
+
+alias ls='exa --group-directories-first --icons'
+alias ll='exa -lh --git --group-directories-first --icons'
+alias la='exa -a --icons'
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -63,5 +63,10 @@ case ":$PATH:" in
   *) export PATH="$LUA_PATH:$PATH" ;;
 esac
 
-bindkey '^I' autosuggest-accept
-bindkey '^[[Z' menu-complete
+# bindkey '^I' autosuggest-accept
+# bindkey '^[[Z' menu-complete
+
+bindkey '^I' menu-complete
+bindkey '^[[Z' autosuggest-accept
+
+export MANPAGER='nvim +Man!'
