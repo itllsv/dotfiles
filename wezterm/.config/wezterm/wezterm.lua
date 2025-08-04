@@ -48,7 +48,7 @@ config.font_rules = {
 		}),
 	},
 }
-config.font_size = 12
+config.font_size = 13
 config.color_scheme = "Kanagawa (Gogh)"
 config.window_padding = {
 	bottom = 0,
