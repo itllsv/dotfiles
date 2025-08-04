@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Omarchy Manual
+Comment=Omarchy Manual
+Exec=chromium --new-window --ozone-platform=wayland --app="https://manuals.omamix.org/2/the-omarchy-manual" --name="Omarchy Manual" --class="Omarchy Manual"
+Terminal=false
+Type=Application
+Icon=/home/itllsv/.local/share/applications/icons/Omarchy Manual.png
+StartupNotify=true

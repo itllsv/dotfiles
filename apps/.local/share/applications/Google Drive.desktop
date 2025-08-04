@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Drive
+Comment=Google Drive
+Exec=chromium --new-window --ozone-platform=wayland --app="https://drive.google.com/" --name="Google Drive" --class="Google Drive"
+Terminal=false
+Type=Application
+Icon=/home/itllsv/.local/share/applications/icons/Google Drive.png
+StartupNotify=true

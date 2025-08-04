@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=HEY
+Comment=HEY
+Exec=chromium --new-window --ozone-platform=wayland --app="https://app.hey.com" --name="HEY" --class="HEY"
+Terminal=false
+Type=Application
+Icon=/home/itllsv/.local/share/applications/icons/HEY.png
+StartupNotify=true
