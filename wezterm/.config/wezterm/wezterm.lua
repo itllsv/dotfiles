@@ -1,6 +1,9 @@
 local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
+
+config.colors = require("colors.vague")
+
 config.window_background_opacity = 1
 
 config.window_decorations = "NONE"
@@ -49,7 +52,7 @@ config.font_rules = {
 	},
 }
 config.font_size = 13
-config.color_scheme = "Kanagawa (Gogh)"
+-- config.color_scheme = "Kanagawa (Gogh)"
 config.window_padding = {
 	bottom = 0,
 }

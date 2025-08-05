@@ -29,7 +29,8 @@ alias cat="bat"
 alias pn="pnpm"
 
 alias ls='exa --group-directories-first'
-alias ll='exa -lha --git --group-directories-first'
+alias ll='exa -la --group-directories-first --no-time --no-user --no-filesize'
+alias lll='exa -lha --group-directories-first'
 alias la='exa -a'
 
 alias neofetch="fastfetch"

@@ -1,0 +1,5 @@
+require("packages.mason")
+require("packages.mini-pick")
+require("packages.oil")
+require("packages.themes")
+require("packages.treesitter")
