@@ -1,0 +1,18 @@
+name: pmc
+root: ~/Work/portal-minha-claro/
+
+windows:
+  - nvim:
+      - mise use node@22
+      - sleep 1
+      - clear
+      - nvim .
+  - term:
+      - mise use node@22
+      - sleep 1
+      - clear
+  - dev:
+      - mise use node@22
+      - sleep 1
+      - clear
+      - pn dev:portal-public

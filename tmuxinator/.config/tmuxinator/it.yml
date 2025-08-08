@@ -1,16 +1,16 @@
 name: it
-root: ~/Projects
+root: ~/Code
 
 windows:
   - editor:
-      - nvm use 23
+      - mise use node@latest
       - sleep 1
       - clear
   - term:
-      - nvm use 23
+      - mise use node@latest
       - sleep 1
       - clear
   - dev:
-      - nvm use 23
+      - mise use node@latest
       - sleep 1
       - clear

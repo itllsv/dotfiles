@@ -1,0 +1,20 @@
+{
+   "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 5, // Waybar height (to be removed for auto height)
+    "modules-center": ["clock"],
+    "modules-right": ["cpu","memory", "tray"],
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%I:%M }",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+}

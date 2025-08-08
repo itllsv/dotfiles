@@ -1,0 +1,5 @@
+require("itllsv.globals")
+require("itllsv.options")
+require("itllsv.keymaps")
+require("itllsv.autocmd")
+require("itllsv.packages")
