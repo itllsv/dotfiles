@@ -1,24 +1,62 @@
 vim.pack.add({
   { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = "https://github.com/mason-org/mason.nvim" },
-  { src = "http://github.com/nvim-lua/plenary.nvim" },
-  { src = "https://github.com/pmizio/typescript-tools.nvim" },
   { src = "https://github.com/stevearc/conform.nvim" },
-  { src = "https://github.com/saghen/blink.cmp", version = "1.*" },
-  { src = "https://github.com/rafamadriz/friendly-snippets" },
+  { src = "https://github.com/pmizio/typescript-tools.nvim" },
+  {
+    src = "https://github.com/saghen/blink.cmp",
+    version = "1.*",
+    build = "cargo build --release",
+  },
+  "rafamadriz/friendly-snippets",
+  "nvim-lua/plenary.nvim",
 })
 
 require("mason").setup({})
-require("typescript-tools").setup({})
 require("blink.cmp").setup({})
+require("typescript-tools").setup({
+  settings = {
+    typescript = {
+      inlayHints = {
+        includeInlayParameterNameHints = "all",
+        includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+        includeInlayFunctionParameterTypeHints = true,
+        includeInlayVariableTypeHints = true,
+        includeInlayPropertyDeclarationTypeHints = true,
+        includeInlayFunctionLikeReturnTypeHints = true,
+      },
+    },
+  },
+})
 
-local capabilities = require("blink.cmp").get_lsp_capabilities()
+local lsp_servers = {
+  lua_ls = {},
+  clangd = {},
+  tailwindcss = {},
+  vue_ls = {
+    settings = {
+      init_options = {
+        vue = {
+          hybridMode = true,
+        },
+        typescript = {
+          tsdk = "~/.local/share/nvim/site/pack/core/opt/typescript-tools.nvim/",
+        },
+      },
+    },
+  },
+}
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+capabilities =
+  vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities({}, false))
 
 capabilities = vim.tbl_deep_extend("force", capabilities, {
   textDocument = {
     foldingRange = {
       dynamicRegistration = false,
-      lineFoldingOnly = false,
+      lineFoldingOnly = true,
     },
   },
 })
@@ -27,34 +65,10 @@ vim.lsp.config("*", {
   capabilities = capabilities,
 })
 
-vim.lsp.config.lua_ls = {
-  settings = {
-    Lua = {
-      runtime = {
-        version = "LuaJit",
-      },
-      diagnostics = {
-        globals = { "vim" },
-      },
-      workspace = {
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-    },
-  },
-}
-
-vim.lsp.enable({
-  "lua_ls",
-  "clangd",
-  "vue_ls",
-  "biome",
-  "stylua",
-  "prettier",
-  "prettierd",
-  "tailwindcss",
-  "isort",
-  "black",
-})
+for server_name, server_config in pairs(lsp_servers) do
+  vim.lsp.config[server_name] = server_config
+  vim.lsp.enable(server_name)
+end
 
 require("conform").setup({
   notify_on_error = false,

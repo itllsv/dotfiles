@@ -1,8 +1,11 @@
-vim.cmd("packadd plenary.nvim")
-vim.cmd("packadd telescope.nvim")
+vim.pack.add({
+  { src = "https://github.com/nvim-telescope/telescope.nvim" },
+'nvim-lua/plenary.nvim'
+})
 
 require("telescope").setup({
   defaults = {
+    path_display = { "truncate" },
     file_ignore_patterns = {
       "^apps/portal%-public/src/app/fatura%-facil%-pme/",
     },

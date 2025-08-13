@@ -4,9 +4,13 @@ local config = wezterm.config_builder()
 
 config.colors = require("colors.kanagawa")
 -- config.colors = require("colors.vague")
+config.foreground_text_hsb = {
+    saturation = 0.9,  -- reduce saturation (0.0 = grayscale, 1.0 = full)
+    -- saturation = 1,  -- reduce saturation (0.0 = grayscale, 1.0 = full)
+  }
 
-config.font_size = 13
-config.window_background_opacity = 1
+config.font_size = 12
+config.window_background_opacity = 0.94
 
 config.window_decorations = "NONE"
 config.use_dead_keys = false
@@ -54,7 +58,10 @@ config.font_rules = {
 	},
 }
 config.window_padding = {
-	bottom = 0,
+	bottom = 10,
+	top = 10,
+	left = 20,
+	right = 20,
 }
 config.keys = {
 	{ key = "L", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },

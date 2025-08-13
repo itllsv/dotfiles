@@ -7,8 +7,10 @@
 -- Map("n", "<leader>e", ":Explore<CR>")
 vim.pack.add({
   { src = "https://github.com/stevearc/oil.nvim" },
+  { src = "https://github.com/echasnovski/mini.icons" },
 })
 
+require("mini.icons").setup({})
 require("oil").setup({
   view_options = {
     show_hidden = true,

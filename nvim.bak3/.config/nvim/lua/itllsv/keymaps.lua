@@ -1,5 +1,5 @@
 Map("n", "<leader>w", ":w<CR>")
-Map("n", "<leader>W", ":w | so<CR>")
+Map("n", "<leader>ww", ":w | so<CR>")
 
 Map("n", "<C-h>", "<C-w>h")
 Map("n", "<C-j>", "<C-w>j")

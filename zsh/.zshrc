@@ -10,6 +10,9 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+if [ -n "$TMUX" ]; then
+  export TERM=tmux-256color
+fi
 
 # yazi 
 function y() {
@@ -29,7 +32,7 @@ function sshadd() {
 
 bindkey '^I' menu-complete
 # bindkey '^[[Z' autosuggest-accept
-bindkey '\' autosuggest-accept
+bindkey '\\' autosuggest-accept
 
 export MANPAGER='nvim +Man!'
 
@@ -76,3 +79,6 @@ alias lll='exa -lha --group-directories-first'
 alias la='exa -a'
 
 alias neofetch="fastfetch"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
