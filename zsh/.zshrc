@@ -30,10 +30,6 @@ function sshadd() {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-bindkey '^I' menu-complete
-# bindkey '^[[Z' autosuggest-accept
-bindkey '\\' autosuggest-accept
-
 export MANPAGER='nvim +Man!'
 
 # pnpm
@@ -48,6 +44,10 @@ eval "$(starship init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
 
 source $ZSH/oh-my-zsh.sh
+
+bindkey -v
+bindkey '^I' menu-complete
+bindkey '\\' autosuggest-accept
 
 alias vim="nvim"
 alias n="nvim"
@@ -70,7 +70,6 @@ alias hc="nvim ~/.config/hypr/hyprland.conf"
 alias tk="tmux kill-server"
 alias tts="tmuxinator start"
 
-alias cat="bat"
 alias pn="pnpm"
 
 alias ls='exa --group-directories-first'
@@ -79,6 +78,10 @@ alias lll='exa -lha --group-directories-first'
 alias la='exa -a'
 
 alias neofetch="fastfetch"
+
+function fv() {
+  nvim $(fzf --preview 'bat --color=always {}')
+}
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
