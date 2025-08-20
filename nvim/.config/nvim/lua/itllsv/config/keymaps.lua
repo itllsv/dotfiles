@@ -13,12 +13,6 @@ vim.keymap.set("n", "<A-k>", ":m .-2<cr>==", { desc = "Move line up" })
 vim.keymap.set("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move selected lines down" })
 vim.keymap.set("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move selected lines up" })
 
-vim.keymap.set("n", '"', 'ciw"<C-r>""<esc>', { desc = "Wrap word with double quotes" })
-vim.keymap.set("n", "'", "ciw'<C-r>\"'<esc>", { desc = "Wrap word with single quotes" })
-vim.keymap.set("n", "(", 'ciw(<C-r>")<esc>', { desc = "Wrap word with parentheses" })
-vim.keymap.set("n", "{", 'ciw{<C-r>"}<esc>', { desc = "Wrap word with curly braces" })
-vim.keymap.set("n", "[", 'ciw[<C-r>"]<esc>', { desc = "Wrap word with square brackets" })
-
 vim.keymap.set("v", '"', 'c"<C-r>""<esc>', { desc = "Wrap selection with double quotes" })
 vim.keymap.set("v", "'", "c'<C-r>\"'<esc>", { desc = "Wrap selection with single quotes" })
 vim.keymap.set("v", "(", 'c(<C-r>")<esc>', { desc = "Wrap selection with parentheses" })

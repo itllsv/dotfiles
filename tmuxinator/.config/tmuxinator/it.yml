@@ -3,14 +3,8 @@ root: ~/Code
 
 windows:
   - editor:
-      - mise use node@latest
-      - sleep 1
       - clear
   - term:
-      - mise use node@latest
-      - sleep 1
       - clear
   - dev:
-      - mise use node@latest
-      - sleep 1
       - clear

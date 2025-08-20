@@ -28,6 +28,12 @@ function sshadd() {
   ssh-add ~/.ssh/itllsv
 }
 
+
+function wclone() {
+	cd ~/Work/
+	sh ~/.scripts/clone_claro_repos.sh
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export MANPAGER='nvim +Man!'

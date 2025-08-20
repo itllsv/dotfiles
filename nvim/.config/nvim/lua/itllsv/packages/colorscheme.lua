@@ -9,7 +9,9 @@ require("kanagawa").setup({
 			},
 		},
 	},
-	overrides = function()
+	overrides = function(colors)
+		local theme = colors.theme
+
 		local opts = { bg = "none" }
 		return {
 			Normal = opts,
@@ -22,6 +24,7 @@ require("kanagawa").setup({
 			TelescopeBorder = opts,
 			StatusLine = opts,
 			Pmenu = opts,
+			BlinkCmpMenuBorder = opts,
 		}
 	end,
 })

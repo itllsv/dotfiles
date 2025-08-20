@@ -34,22 +34,22 @@
 --- - remove unused code
 ---
 
-local vue_language_server_path = vim.fn.expand("$MASON/packages")
-	.. "/vue-language-server"
-	.. "/node_modules/@vue/language-server"
-local vue_plugin = {
-	name = "@vue/typescript-plugin",
-	location = vue_language_server_path,
-	languages = { "vue" },
-	configNamespace = "typescript",
-}
+-- local vue_language_server_path = vim.fn.expand("$MASON/packages")
+-- 	.. "/vue-language-server"
+-- 	.. "/node_modules/@vue/language-server"
+-- local vue_plugin = {
+-- 	name = "@vue/typescript-plugin",
+-- 	location = vue_language_server_path,
+-- 	languages = { "vue" },
+-- 	configNamespace = "typescript",
+-- }
 
 return {
 	init_options = {
 		hostInfo = "neovim",
-		plugins = {
-			vue_plugin,
-		},
+		-- plugins = {
+		-- 	vue_plugin,
+		-- },
 	},
 	cmd = { "typescript-language-server", "--stdio" },
 	filetypes = {
@@ -59,7 +59,7 @@ return {
 		"typescript",
 		"typescriptreact",
 		"typescript.tsx",
-		"vue",
+		-- "vue",
 	},
 	root_markers = { "tsconfig.json", "jsconfig.json", "package.json", ".git" },
 	handlers = {
